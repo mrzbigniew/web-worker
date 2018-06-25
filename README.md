@@ -14,7 +14,9 @@ This project could be useful for some developers that wants to learn about webwo
 
 ```javascript
     npm install
-````
+```
+
+or
 
 ```javascript
     yarn install
