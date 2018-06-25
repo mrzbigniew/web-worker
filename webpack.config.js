@@ -6,6 +6,7 @@ module.exports = (env, config) => {
   const isDev = config.mode === 'development';
 
   return {
+    context: path.resolve(__dirname, './src'),
     mode: isDev ? 'development' : 'production',
     plugins: [
       new CleanWebpackPlugin(['dist']),
@@ -15,7 +16,7 @@ module.exports = (env, config) => {
       })
     ],
     entry: {
-      main: './src/index.ts'
+      main: './index.ts'
     },
     module: {
       rules: [{
@@ -31,9 +32,12 @@ module.exports = (env, config) => {
         ]
       }, {
         test: /\.(png|svg|jpg|gif)$/,
-        use: [
-          'file-loader'
-        ]
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[path][name].[ext]'
+          }
+        }]
       }, {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         use: [

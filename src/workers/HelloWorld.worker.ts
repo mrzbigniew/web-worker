@@ -1,7 +1,7 @@
-const ctx: Worker = self as any;
+const helloWorldWorker: Worker = self as any;
 
-ctx.postMessage({message: 'Hello World'});
+helloWorldWorker.postMessage({message: 'Hello World'});
 
-ctx.addEventListener('message', (event) => {
+helloWorldWorker.addEventListener('message', (event) => {
   console.log(event);
 });
