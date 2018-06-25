@@ -1,0 +1,22 @@
+{
+  "name": "web-worker",
+  "version": "1.0.0",
+  "description": "Project for web worker samples",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mrzbigniew/web-worker.git"
+  },
+  "keywords": [
+    "webworker"
+  ],
+  "author": "mrzbigniew",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrzbigniew/web-worker/issues"
+  },
+  "homepage": "https://github.com/mrzbigniew/web-worker#readme"
+}
